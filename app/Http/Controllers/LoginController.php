@@ -37,14 +37,18 @@ class LoginController extends Controller
         $prodi = $jsonDataDosen['data']['dosen'][0]['prodi'];
         $email = $jsonDataDosen['data']['dosen'][0]['email'];
         $nidn = $jsonDataDosen['data']['dosen'][0]['nidn'];
-        $nip = $jsonDataDosen['data']['dosen'][0]['nip'];
+        $nip = $jsonDataDosen['data']['dosen'][0]['nip'];   
 
-        return view('home', [
+        return view('biodata', [
             'nama' => $nama, 
             'prodi' => $prodi, 
             'email' => $email, 
             'nidn' => $nidn, 
             'nip' => $nip
         ]);
+    }
+
+    function pendidikan() {
+        return view('pendidikan');
     }
 }

@@ -1,0 +1,26 @@
+@extends('home')
+
+@section('konten')
+    <table>
+        <tr>
+            <td>Nama:</td>
+            <td>{{$nama}}</td>
+        </tr>
+        <tr>
+            <td>Prodi:</td>
+            <td>{{$prodi}}</td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td>{{$email}}</td>
+        </tr>
+        <tr>
+            <td>NIDN:</td>
+            <td>{{$nidn}}</td>
+        </tr>
+        <tr>
+            <td>NIP:</td>
+            <td>{{$nip}}</td>
+        </tr>
+    </table>
+@endsection
