@@ -1,6 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 nav li {
     display: inline;
-    margin
+
 }
 
 nav {
@@ -10,7 +14,7 @@ nav {
 }
 
 nav a {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     text-decoration: none;
     /* color: white; */

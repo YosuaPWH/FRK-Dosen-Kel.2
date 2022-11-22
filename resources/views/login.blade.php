@@ -7,31 +7,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     @vite(['resources/js/app.js'])
+    @vite(['resources/css/app.css'])
 </head>
 
-<body style="background-color: #00bfff">
-    <div style="margin: 0 auto; width: 40%; height: 80vh; margin-top: 5%"
-        class="d-flex justify-content-center align-items-center bg-light rounded-3 p-5 shadow">
-        <div class="w-75" >
-            <div class="text-center">
-                <img src="{{ asset('storage/logodel.jpg') }}" alt="Logo Del" width="20%">
-                <h3>Selamat datang di SISTER</h3>
-                <p>Sistem Informasi Sumberdaya Terintegrasi</p>
+<body>
+    <div class="bg-[url('/public/storage/bg_login.jpg')] bg-opacity-50 bg-cover justify-center flex py-5"
+        style="height: 100vh">
+        <div class="w-2/6 flex rounded bg-white shadow-2xl p-5 self-center">
+            <div>
+                <img src="{{ asset('storage/logodel.jpg') }}" alt="Logo Del" width="20%" class="m-auto mb-3">
+                <div class="text-center mb-5">
+                    <h3>Rencana Kerja Dosen</h3>
+                    <h5>Institut Teknologi Del</h5>
+                </div>
+                <form action="/login/auth" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username-login"
+                            class="form-control @error('password') is-invalid @enderror" value="@error('password') {{ old('username-login') }} @enderror"
+                            placeholder="Silahkan masukkan username anda" onclick="removeRedBorder()">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password-login"
+                            class="form-control @error('password') is-invalid @enderror"
+                            placeholder="Silahkan masukkan password anda" onclick="removeRedBorder()">
+                        <div class="invalid-feedback">
+                            Username atau password salah
+                        </div>
+
+                    </div>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-5 py-1.5 w-100 text-white rounded ">
+                        Login
+                    </button>
+                </form>
             </div>
-            <form action="/login/auth" style="margin: 0 auto" method="POST">
-                @csrf
-                <h3>Login</h3>
-                <div class="mb-3">
-                    <label for="inputUsername" class="form-label">Username</label>
-                    <input type="text" class="form-control" name="username-login"
-                        placeholder="Silahkan masukkan username anda">
-                </div>
-                <div class="mb-3">
-                    <label for="inputPassword">Password</label>
-                    <input type="password" name="password-login" id="" class="form-control" placeholder="Silahkan masukkan password anda">
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Login</button>
-            </form>
         </div>
     </div>
 </body>

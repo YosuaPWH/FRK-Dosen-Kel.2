@@ -15,12 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('biodata');
+})->middleware('auth')->name('home');
 
-Route::get('/login', function () {
+// Route::get('/login', function () {
+//     return view('login');
+// });
+
+Route::get('/user/login', function() {
     return view('login');
-});
+})->name('login');
 
 Route::post('/login/auth', [LoginController::class, 'login']);
 
