@@ -43,14 +43,13 @@
         <div class="main p-2 m-2 rounded-lg bg-white w-full">
             <h2>Rencana Kerja Dosen - Semester Genap 2022/2023</h2>
             <hr class="mt-0">
-            <nav style="display: inline">
-                <ol style="list-style-type: none; display: inline;" class="ps-0" >
-                    <li class="me-2"><a href="/login/auth">Biodata</a></li>
-                    <li class="mx-2"><a href="/pendidikan">Pelaksanaan Pendidikan</a></li>`
-                    <li class="mx-2"><a href="/penelitian">Pelaksanaan Penelitian</a></li>
-                    <li class="mx-2"><a href="/pengabdian">Pelaksanaan Pengabdian</a></li>
-                    <li class="mx-2"><a href="/penunjang">Pelaksanaan Penunjang</a></li>
-                </ol>
+            <nav class="flex p-0">
+                <a href="/biodata" class="bg-theme-4 p-3 hover:bg-theme-1 hover:text-white rounded-l-lg">Biodata</a>
+                <a href="/pendidikan" class="bg-theme-4 p-3 hover:bg-theme-1 hover:text-white">Pelaksanaan Pendidikan</a>
+                <a href="/penelitian" class="bg-theme-4 p-3 hover:bg-theme-1 hover:text-white">Pelaksanaan Penelitian</a>
+                <a href="/pengabdian" class="bg-theme-4 p-3 hover:bg-theme-1 hover:text-white">Pelaksanaan Pengabdian</a>
+                <a href="/penunjang" class="bg-theme-4 p-3 hover:bg-theme-1 hover:text-white">Pelaksanaan Penunjang</a>
+                <a href="/simpulan" class="bg-theme-4 p-3 hover:bg-theme-1 hover:text-white rounded-r-lg">Simpulan</a>
             </nav>
             <hr>
             

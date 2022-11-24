@@ -1,8 +1,12 @@
-@extends('home')
+@extends('pages.homeDesign')
 
 @section('konten')
-    <table class="w-full table-auto border">
-        <tr class="border-b font-medium bg-gray-200">
+<div class=" mb-1 w-fit ml-auto">
+    @include('components.setting_biodata')
+</div>
+<div class="sm:rounded-lg p-3 bg-whitety bg-opacity-50">
+    <table class="w-full rounded-lg">
+        <tr class="font-medium bg-gray-200">
             <th class="p-2">
                 Nama
             </th>
@@ -32,13 +36,13 @@
             </th>
             <td class="w-4/6">
                 @if ($prodi == 'S1 Informatika' || $prodi == 'S1 Sistem Informasi' || $prodi == 'S1 Teknik Elektro')
-                    Fakultas Informatika dan Teknik Elektro
+                Fakultas Informatika dan Teknik Elektro
                 @elseif ($prodi == 'S1 Manajemen Rekayasa')
-                    Fakultas Teknik Industri
+                Fakultas Teknik Industri
                 @elseif ($prodi == 'S1 Teknik Bioproses')
-                    Fakultas Bioteknologi
+                Fakultas Bioteknologi
                 @elseif ($prodi == 'DIII Teknologi Kompoter' || $prodi == 'DII Teknologi Informasi' || $prodi == 'DIV Teknologi Rekayasa Perangkat Lunak')
-                    Fakultas Vokasi
+                Fakultas Vokasi
                 @endif   
             </td>
         </tr>
@@ -64,11 +68,12 @@
             </th>
             <td class="w-4/6">
                 @if ($keaktifan == 'A')
-                    Aktif
+                Aktif
                 @else
-                    Keluar
+                Keluar
                 @endif
             </td>
         </tr>
     </table>
+</div>
 @endsection

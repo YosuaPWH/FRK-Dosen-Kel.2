@@ -24,14 +24,14 @@
                     @csrf
                     <div class="mb-3">
                         <label for="username">Username</label>
-                        <input type="text" id="username" name="username-login"
+                        <input type="text" id="username" name="usernameLogin"
                             class="form-control @error('password') is-invalid @enderror" value="@error('password') {{ old('username-login') }} @enderror"
                             placeholder="Silahkan masukkan username anda" onclick="removeRedBorder()">
                         <div class="invalid-feedback"></div>
                     </div>
                     <div class="mb-4">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password-login"
+                        <input type="password" id="password" name="passwordLogin"
                             class="form-control @error('password') is-invalid @enderror"
                             placeholder="Silahkan masukkan password anda" onclick="removeRedBorder()">
                         <div class="invalid-feedback">
@@ -39,7 +39,7 @@
                         </div>
 
                     </div>
-                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-5 py-1.5 w-100 text-white rounded ">
+                    <button type="submit" class="bg-theme-1 hover:bg-blue-700 px-5 py-1.5 w-100 text-white rounded ">
                         Login
                     </button>
                 </form>

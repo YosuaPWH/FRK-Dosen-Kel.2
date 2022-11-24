@@ -11,8 +11,17 @@ module.exports = {
         'theme-1': '#3F4CD9',
         'theme-2': '#6E61CA',
         'theme-3': '#C282FA',
-        'theme-4': '#ECEDEF'
+        'theme-4': '#ECEDEF',
+        'black': '#000000',
+        'white': '#FFFFFF',
+        'bluedesign': '#2A61CD',
+        'skydesign': '#64C1D1',
+        'whitety': '#FFFFFF'
       },
+      width: {
+        '1/20': '5%',
+        '1/33': '3.33%'
+      }
     },
   },
   plugins: [],

@@ -29,3 +29,11 @@ Route::get('/user/login', function() {
 Route::post('/login/auth', [LoginController::class, 'login']);
 
 Route::get('/pendidikan', [LoginController::class, 'pendidikan']);
+
+Route::get('/biodata', function() {
+    return view('pages.biodata');
+});
+
+Route::get('/home', function () {
+    return view('pages.homeDesign');
+});

@@ -9,11 +9,10 @@ use Illuminate\Support\Facades\Redirect;
 class LoginController extends Controller
 {
 
-
     public function login(Request $request){
 
-        $username = $request->input('username-login');
-        $password = $request->input('password-login');
+        $username = $request->usernameLogin;
+        $password = $request->passwordLogin;
 
 
         $response = Http::asForm()->post('https://cis-dev.del.ac.id/api/jwt-api/do-auth', [
@@ -67,4 +66,5 @@ class LoginController extends Controller
             'nama' => 'dwa',
         ]);
     }
+
 }
